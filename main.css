@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+}
+
+body{
+    background: #080a1e;
+}
+
+header{
+    height: 160px;
+    text-align: center;
+    padding:20px;
+    color: white;
+    margin-bottom: 30px;
+    background: #080a1e;
+
+}
+
+h1{
+    margin:0;
+    
+}
+
+#logo {
+    fill: transparent;
+    font-size: 100px;
+    stroke-dasharray: 650 650;
+    stroke-dashoffset: 650;
+    stroke: #ffffff;
+    stroke-width: 2px;
+    -ms-transition: stroke-dashoffset 5s linear;
+    -webkit-transition: stroke-dashoffset 5s linear;
+    -moz-transition: stroke-dashoffset 5s linear;
+    transition: stroke-dashoffset 5s linear;
+    }
+
+#logo.trace {
+        stroke-dashoffset: 0;
+    }
+
+
+.card{
+    position:relative;
+    margin:.5rem 0 1rem 0;
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius:2px;
+    width:600px;
+    overflow:auto;
+    height: 400px;
+    margin: 0px auto;
+    padding:32px; 
+    border-style: dotted; 
+    border-width: 3px; 
+    border-color: #000000;
+    border-radius: 10px; 
+    
+
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.task{
+    vertical-align: middle;
+}
+
+input#Remover{
+    vertical-align: middle;
+	right: 0;
+	border: 0;
+	background: none;
+	font-size: 16px;
+	color: #cc9a9a;
+	margin-bottom: 11px;
+    transition: color 0.2s ease-out;
+    margin-left: 1px;
+
+}
+
+input#Remover:hover{
+    
+    color: #F90000;
+}
+ 
+@media screen and (max-width: 840px) {
+    #logo{
+        font-size: 75px;
+    }
+    svg{
+        width: 550px;
+    }
+
+    .card{
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 562px) {
+
+    #logo{
+        font-size: 55px;
+    }
+
+    header{
+        padding:0px;
+    }
+
+    svg{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 407px) {
+    #logo{
+        font-size: 40px;
+    }
+    header{
+        padding:0px;
+    }
+    svg{
+        width: 300px;
+    }
+}

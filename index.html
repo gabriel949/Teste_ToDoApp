@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="todolist">
+
+<head>
+	<title>Lista de Tarefas</title>
+	<link rel="stylesheet" href="vendors/css/materialize.min.css">
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	
+</head>
+
+<body ng-controller="todolistCtrl">
+
+	<header>
+			<svg id="logo" width="710" height="180">
+					<text id="logo-text" x="50%" y="50%" text-anchor="middle">Lista de Tarefas</text>
+				</svg>
+	</header>
+	
+	<div class="container">	
+		<div class="card">
+		<div class="col s12">
+			<div class="row">
+				<div class="input-field col s8">
+					<input class="form-control" id="newtodo" type="text" ng-model="task.nome" />
+					<label for="newtodo">Nova Tarefa</label>		
+				</div>
+				<div class="input-field col s4">
+					<button class="waves-effect waves-light btn-large cyan darken-3" ng-click="adicionarContato(task)">Adicionar</button>					   
+				</div>
+			</div>
+		</div>
+		
+		<div class="row" ng-if="tasks.length > 0" >
+			<div class="col s12">
+			<ul class="collection col s12  " >
+
+				<li class="collection-item tarefa" ng-repeat="task in tasks" id="to-dos" >
+					
+						<input type="checkbox" id="{{task.id}}" ng-model="task.status" />
+					<label class="task" for="{{task.id}}"  ng-class="{'done' : task.status}">{{task.nome}}</label>	
+					
+					<input class="right" type="button" id ="Remover" ng-click="delete(task)" value="x">			
+							
+				</li>
+                    
+			</ul>
+			
+			</div>
+		</div>	
+		</div>
+
+	</div>
+	<script src="angular.js"></script>
+	<script src="vendors/js/jquery.min.js"></script>
+	<script src="vendors/js/materialize.min.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "<h1>TODO List</h1>",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel949/TodoList.git"
+  },
+  "author": "Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabriel949/TodoList/issues"
+  },
+  "homepage": "https://github.com/gabriel949/TodoList#readme",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  }
+}
